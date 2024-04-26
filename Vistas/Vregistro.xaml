@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jculcayE1.Vistas.Vregistro"
+             Title="Registro">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10"
+                            Padding="0,0"
+                            VerticalOptions="Start" Background="#F4F6F6">
+
+            <Label x:Name="lblUsuario"
+                    Text=""
+                   Padding="2,2,10,2"
+                    VerticalOptions="End" 
+                    FontSize="10"
+                    TextColor="Black"                                        
+                    HorizontalOptions="End" 
+                    />
+            <Label 
+                    Text="REGISTRAR"
+                   Padding="2,2,10,2"
+                    VerticalOptions="End" 
+                    FontSize="22"
+                    TextColor="Blue"                                        
+                    HorizontalOptions="Center" 
+                    />
+
+            <Grid Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Fecha:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+                    Grid.Column="0"                     
+                 />
+
+                <DatePicker x:Name="Pkfecha"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+
+                <Label Text="Pais:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="1"
+                    Grid.Column="0"                     
+                 />
+                <Picker x:Name="pkPais" VerticalOptions="Start" 
+                        Grid.Row="1"
+                        Grid.Column="1" 
+                        >
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>Peru</x:String>
+                        <x:String>Chile</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Ciudad:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="2"
+                    Grid.Column="0"                     
+                 />
+                <Picker x:Name="pkCiudad" VerticalOptions="Start" 
+                        Grid.Row="2"
+                        Grid.Column="1" 
+                        >
+                    <Picker.Items>
+                        <x:String>Cuenca</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Ciudad</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Monto Inical:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="3"
+                    Grid.Column="0"                     
+                 />
+                <Entry x:Name="txtMontoInicial"
+                       Keyboard="Numeric"
+                       Placeholder=" "
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="3"
+                       Grid.Column="1" 
+                       WidthRequest="150"                       
+                       />
+
+                <Label Text="PagoMensual:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="4"
+                    Grid.Column="0"                     
+                 />
+                <Entry x:Name="txtPagoMensual"
+                       Keyboard="Numeric"
+                       Placeholder=" "
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="4"
+                       IsReadOnly="True"
+                       Grid.Column="1" 
+                       WidthRequest="150"                       
+                       />
+
+
+
+            </Grid>
+            <Grid Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                    <RowDefinition />                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+                    Grid.Column="0"                     
+                 />
+                <Entry x:Name="txtNombre"                       
+                       Placeholder=" "
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       WidthRequest="150"                       
+                       />
+                <Label Text="Apellido:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+                    Grid.Column="1"                     
+                 />
+                <Entry x:Name="txtApellido"                       
+                       Placeholder=" "
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="1"
+                       Grid.Column="1" 
+                       WidthRequest="150"                       
+                       />
+                
+                <Label Text="Edad:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+                    Grid.Column="2"                     
+                 />
+                <Entry x:Name="txtEdad"                       
+                       Placeholder=" "
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="1"
+                       Grid.Column="2" 
+                       WidthRequest="150"                       
+                       />
+
+            </Grid>
+
+            <Grid Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition  />                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />                    
+                </Grid.ColumnDefinitions>
+                
+                <Button x:Name="btCalularPagoM" 
+                    Text="Calcular PagoMensual"
+                    Background="#3498DB"
+                    Clicked="btCalularPagoM_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="0" 
+                        />
+
+                <Button x:Name="btVerResumen" 
+                    Text="Ver Resumen"
+                    Background="#3498DB"
+                    Clicked="btVerResumen_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1" 
+                        />
+
+            </Grid>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
